@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 def Rfm_Analiz(regex=False):
     pd.set_option('display.max_columns',50)
     pd.set_option('display.float_format',lambda x:'%.3f'%x)
-    data=pd.read_excel("C:\\Users\\Tuncer\\Desktop\\Desktop\\Data_Science\\CRM\\RFM\\datasets\\online_retail_II.xlsx",sheet_name="Year 2010-2011")
+    data=pd.read_excel("yours FilePath",sheet_name="Year 2010-2011")
     df=pd.DataFrame(data)
 
     print(f"Boyut Bilgisi: {df.shape}\n")
@@ -72,6 +72,7 @@ def Rfm_Analiz(regex=False):
     rfm["segment"]=rfm["RFM_SCORES"].replace(seg_map,regex=True)
 
     print(rfm.head(10))
+
 
 
 
